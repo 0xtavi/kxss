@@ -93,7 +93,6 @@ func main() {
 	for sc.Scan() {
 		initialChecks <- paramCheck{url: sc.Text()}
 	}
-	time.Sleep(0.5 * time.Second)
 	close(initialChecks)
 	<-done
 }
